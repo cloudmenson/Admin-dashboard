@@ -27,18 +27,19 @@ const Login2 = () => {
         <Grid container spacing={0} justifyContent="center" sx={{ height: '100vh' }}>
           <Grid
             item
-            xs={12}
-            sm={12}
             lg={4}
             xl={3}
+            xs={12}
+            sm={12}
             display="flex"
-            justifyContent="center"
             alignItems="center"
+            justifyContent="center"
           >
             <Card elevation={9} sx={{ p: 4, zIndex: 1, width: '100%', maxWidth: '500px' }}>
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Logo />
               </Box>
+
               <AuthLogin
                 subtext={
                   <Typography variant="subtitle1" textAlign="center" color="textSecondary" mb={1}>

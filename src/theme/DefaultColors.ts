@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import { PaletteOptions } from '@mui/material/styles';
 
 import { shadows } from './Shadows';
 import { typography } from './Typography';
@@ -63,7 +64,7 @@ const baselightTheme = createTheme({
       hover: '#f6f9fc',
     },
     divider: '#e5eaef',
-  },
+  } as PaletteOptions,
   typography,
   shadows,
 });

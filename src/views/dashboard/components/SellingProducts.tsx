@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Card,
@@ -8,7 +9,7 @@ import {
   CardContent,
   LinearProgress,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+// import { useTheme } from '@mui/material/styles';
 
 const sells = [
   {
@@ -25,7 +26,14 @@ const sells = [
   },
 ];
 
-const SellingProducts = () => {
+interface SellTypes {
+  product: string;
+  price: string;
+  percent: number;
+  color: any;
+}
+
+const SellingProducts: React.FC = () => {
   const secondary = 'rgb(73,190,255)';
   const primary = 'rgb(93, 135, 255)';
   const primarylight = 'rgb(236,242,255)';
@@ -59,7 +67,7 @@ const SellingProducts = () => {
         >
           <Box p={3}>
             <Stack spacing={3}>
-              {sells.map((sell, i) => (
+              {sells?.map((sell: SellTypes, i: number) => (
                 <Box key={i}>
                   <Stack
                     mb={1}
@@ -70,10 +78,12 @@ const SellingProducts = () => {
                   >
                     <Box>
                       <Typography variant="h6">{sell.product}</Typography>
+
                       <Typography variant="subtitle2" color="textSecondary">
                         ${sell.price}
                       </Typography>
                     </Box>
+
                     <Chip
                       sx={{
                         width: 55,
@@ -85,6 +95,7 @@ const SellingProducts = () => {
                       label={sell.percent + '%'}
                     />
                   </Stack>
+
                   <LinearProgress value={sell.percent} variant="determinate" color={sell.color} />
                 </Box>
               ))}

@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 export interface IBlankCard {
-  children: ReactNode;
-  className: string;
+  children?: ReactNode;
+  className?: string;
 }
 
 export interface IDashboardCard {

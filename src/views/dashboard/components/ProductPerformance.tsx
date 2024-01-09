@@ -14,7 +14,18 @@ import {
 
 import DashboardCard from '../../../components/shared/DashboardCard';
 
-const products = [
+interface Product {
+  id: string;
+  imgsrc: string;
+  name: string;
+  post: string;
+  pname: string;
+  priority: string;
+  pbg: string;
+  budget: string;
+}
+
+const products: Product[] = [
   {
     id: '1',
     imgsrc:
@@ -62,7 +73,7 @@ const products = [
   },
 ];
 
-const ProductPerformance = () => {
+const ProductPerformance: React.FC = () => {
   return (
     <DashboardCard title="Product Performance">
       <Box sx={{ overflow: 'auto', width: { xs: '280px', sm: 'auto' } }}>

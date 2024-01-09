@@ -1,4 +1,6 @@
-export const typography = {
+import { TypographyOptions } from '@mui/material/styles/createTypography';
+
+export const typography: TypographyOptions = {
   fontFamily: "'Plus Jakarta Sans', sans-serif;",
   h1: {
     fontWeight: 600,

@@ -1,29 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-// mui imports
-import {
-  ListItemIcon,
-  ListItem,
-  List,
-  styled,
-  ListItemText,
-  useTheme
-} from '@mui/material';
+import { List, styled, useTheme, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 
-const NavItem = ({ item, level, pathDirect, onClick }) => {
-  const Icon = item.icon;
+import { INavItem } from './types';
+
+const NavItem: React.FC<INavItem> = ({ item, level, onClick }) => {
+  const Icon = item?.icon;
   const theme = useTheme();
-  const itemIcon = <Icon stroke={1.5} size="1.3rem" />;
+  const currentLevel = level ?? 0;
+  const itemIcon = Icon ? <Icon stroke={1.5} size="1.3rem" /> : null;
 
   const ListItemStyled = styled(ListItem)(() => ({
     whiteSpace: 'nowrap',
     marginBottom: '2px',
     padding: '8px 10px',
     borderRadius: '8px',
-    backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
-    color:
-      theme.palette.text.secondary,
+    backgroundColor: currentLevel > 1 ? 'transparent !important' : 'inherit',
+    color: theme.palette.text.secondary,
     paddingLeft: '10px',
     '&:hover': {
       backgroundColor: theme.palette.primary.light,
@@ -41,37 +33,23 @@ const NavItem = ({ item, level, pathDirect, onClick }) => {
 
   return (
     <List component="li" disablePadding key={item.id}>
-      <ListItemStyled
-        button
-        component={item.external ? 'a' : NavLink}
-        to={item.href}
-        href={item.external ? item.href : ''}
-        disabled={item.disabled}
-        selected={pathDirect === item.href}
-        target={item.external ? '_blank' : ''}
-        onClick={onClick}
-      >
+      <ListItemStyled onClick={onClick}>
         <ListItemIcon
           sx={{
-            minWidth: '36px',
             p: '3px 0',
+            minWidth: '36px',
             color: 'inherit',
           }}
         >
           {itemIcon}
         </ListItemIcon>
+
         <ListItemText>
           <>{item.title}</>
         </ListItemText>
       </ListItemStyled>
     </List>
   );
-};
-
-NavItem.propTypes = {
-  item: PropTypes.object,
-  level: PropTypes.number,
-  pathDirect: PropTypes.any,
 };
 
 export default NavItem;

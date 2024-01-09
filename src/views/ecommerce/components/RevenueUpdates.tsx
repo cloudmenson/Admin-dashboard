@@ -1,11 +1,12 @@
+import React from 'react';
 import Chart from 'react-apexcharts';
 import { Stack, Typography, Avatar, Box, Card, CardHeader, CardContent } from '@mui/material';
 
-const RevenueUpdates = () => {
+const RevenueUpdates: React.FC = () => {
   const primary = 'rgb(93, 135, 255)';
   const secondary = 'rgb(73,190,255)';
 
-  const optionscolumnchart = {
+  const optionscolumnchart: any = {
     chart: {
       type: 'bar',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",

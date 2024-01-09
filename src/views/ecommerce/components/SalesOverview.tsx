@@ -1,16 +1,17 @@
+import React from 'react';
 import Chart from 'react-apexcharts';
 import { IconGridDots } from '@tabler/icons';
 import { useTheme } from '@mui/material/styles';
 import { Stack, Typography, Box, Card, CardHeader, CardContent } from '@mui/material';
 
-const SalesOverview = () => {
+const SalesOverview: React.FC = () => {
   const theme = useTheme();
   const primary = 'rgb(93, 135, 255)';
   const secondary = 'rgb(73,190,255)';
   const primarylight = 'rgb(236,242,255)';
   const textColor = theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.8)' : '#2A3547';
 
-  const optionscolumnchart = {
+  const optionscolumnchart: any = {
     chart: {
       type: 'donut',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",

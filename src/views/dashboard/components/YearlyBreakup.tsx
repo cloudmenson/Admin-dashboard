@@ -12,7 +12,7 @@ const YearlyBreakup = () => {
   const primarylight = '#ecf2ff';
   const successlight = theme.palette.success.light;
 
-  const optionscolumnchart = {
+  const optionscolumnchart: any = {
     chart: {
       type: 'donut',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -57,7 +57,7 @@ const YearlyBreakup = () => {
       },
     ],
   };
-  const seriescolumnchart = [38, 40, 25];
+  const seriescolumnchart: any = [38, 40, 25];
 
   return (
     <DashboardCard title="Yearly Breakup">

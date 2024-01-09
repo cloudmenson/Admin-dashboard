@@ -27,8 +27,10 @@ const FullLayout = () => {
   return (
     <MainWrapper className="mainwrapper">
       <Sidebar
-        isMobileSidebarOpen={isMobileSidebarOpen}
-        onSidebarClose={() => setMobileSidebarOpen(false)}
+        // isMobileSidebarOpen={isMobileSidebarOpen}
+        open={isMobileSidebarOpen}
+        // onSidebarClose={() => setMobileSidebarOpen(false)}
+        onClose={() => setMobileSidebarOpen(false)}
       />
 
       <PageWrapper className="page-wrapper">

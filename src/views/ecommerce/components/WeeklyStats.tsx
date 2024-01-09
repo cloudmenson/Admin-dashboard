@@ -1,8 +1,9 @@
+import React from 'react';
 import Chart from 'react-apexcharts';
 import { IconGridDots } from '@tabler/icons';
 import { Stack, Typography, Avatar, Box, Card, CardHeader, CardContent } from '@mui/material';
 
-const WeeklyStats = () => {
+const WeeklyStats: React.FC = () => {
   const primary = 'rgb(93, 135, 255)';
   const primarylight = 'rgb(236,242,255)';
   const error = 'rgb(250,137,107)';
@@ -10,7 +11,7 @@ const WeeklyStats = () => {
   const secondary = 'rgb(73,190,255)';
   const secondarylight = 'rgb(232,247,255)';
 
-  const optionscolumnchart = {
+  const optionscolumnchart: any = {
     chart: {
       type: 'area',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -90,16 +91,18 @@ const WeeklyStats = () => {
         subheader="Average sales"
         titleTypographyProps={{ fontSize: '18px' }}
       />
+
       <>
         <CardContent>
           <Stack mt={4}>
             <Chart
-              options={optionscolumnchart}
-              series={seriescolumnchart}
               type="area"
               height="130px"
+              series={seriescolumnchart}
+              options={optionscolumnchart}
             />
           </Stack>
+
           <Stack spacing={3} mt={3}>
             {stats.map((stat, i) => (
               <Stack
@@ -121,10 +124,12 @@ const WeeklyStats = () => {
                   >
                     {stat.icon}
                   </Avatar>
+
                   <Box>
                     <Typography variant="h6" mb="4px">
                       {stat.title}
                     </Typography>
+
                     <Typography variant="subtitle2" color="textSecondary">
                       {stat.subtitle}
                     </Typography>

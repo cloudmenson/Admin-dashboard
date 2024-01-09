@@ -3,7 +3,7 @@ import { Box, List } from '@mui/material';
 import { useLocation } from 'react-router';
 
 import NavItem from './NavItem';
-import Menuitems from './MenuItems';
+import menuItems from './MenuItems';
 import NavGroup from './NavGroup/NavGroup';
 
 const SidebarItems = () => {
@@ -13,7 +13,7 @@ const SidebarItems = () => {
   return (
     <Box sx={{ px: 3 }}>
       <List sx={{ pt: 0 }} className="sidebarNav">
-        {Menuitems.map((item) => {
+        {menuItems?.map((item) => {
           if (item.subheader) {
             return <NavGroup item={item} key={item.subheader} />;
           } else {

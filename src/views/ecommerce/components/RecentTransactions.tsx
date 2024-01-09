@@ -18,10 +18,8 @@ const RecentTransactions = () => {
     <DashboardCard title="Recent Transactions">
       <>
         <Timeline
+          placeholder={false}
           className="theme-timeline"
-          nonce={undefined}
-          onResize={undefined}
-          onResizeCapture={undefined}
           sx={{
             boxShadow: 'none',
             p: 0,

@@ -1,11 +1,12 @@
-import { useMediaQuery, Box, Drawer } from '@mui/material';
+import React from 'react';
+import { useMediaQuery, Box, Drawer, Theme } from '@mui/material';
 
+import { ISidebar } from './types';
 import Logo from '../shared/logo/Logo';
 import SidebarItems from './SidebarItems';
 
-const Sidebar = (props) => {
-
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+const Sidebar: React.FC<ISidebar> = ({ open, onClose }) => {
+  const lgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));
 
   const sidebarWidth = '270px';
 
@@ -19,7 +20,8 @@ const Sidebar = (props) => {
       >
         <Drawer
           anchor="left"
-          open={props.isSidebarOpen}
+          open={open}
+          // open={isSidebarOpen}
           variant="permanent"
           PaperProps={{
             sx: {
@@ -36,10 +38,10 @@ const Sidebar = (props) => {
             <Box px={3}>
               <Logo />
             </Box>
+
             <Box>
               <SidebarItems />
             </Box>
-            
           </Box>
         </Drawer>
       </Box>
@@ -49,9 +51,11 @@ const Sidebar = (props) => {
   return (
     <Drawer
       anchor="left"
-      open={props.isMobileSidebarOpen}
-      onClose={props.onSidebarClose}
       variant="temporary"
+      // onClose={props.onSidebarClose}
+      onClose={onClose}
+      // open={props.isMobileSidebarOpen}
+      open={open}
       PaperProps={{
         sx: {
           width: sidebarWidth,

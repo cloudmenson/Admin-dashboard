@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Card,
@@ -9,7 +10,7 @@ import {
   CardContent,
 } from '@mui/material';
 
-const PaymentGateways = () => {
+const PaymentGateways: React.FC = () => {
   const primary = 'rgb(93, 135, 255)';
   const primarylight = 'rgb(236,242,255)';
   const error = 'rgb(250,137,107)';

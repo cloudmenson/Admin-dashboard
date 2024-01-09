@@ -38,6 +38,7 @@ const Register2 = () => (
             <Box display="flex" alignItems="center" justifyContent="center">
               <Logo />
             </Box>
+
             <AuthRegister
               subtext={
                 <Typography variant="subtitle1" textAlign="center" color="textSecondary" mb={1}>
@@ -49,6 +50,7 @@ const Register2 = () => (
                   <Typography color="textSecondary" variant="h6" fontWeight="400">
                     Already have an Account?
                   </Typography>
+
                   <Typography
                     component={Link}
                     to="/auth/login"

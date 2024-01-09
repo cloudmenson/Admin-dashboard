@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Avatar,
   Box,
   Menu,
+  Avatar,
   Button,
-  IconButton,
   MenuItem,
+  IconButton,
+  ListItemText,
   ListItemIcon,
-  ListItemText
 } from '@mui/material';
 
 import { IconListCheck, IconMail, IconUser } from '@tabler/icons';
@@ -16,10 +16,12 @@ import { IconListCheck, IconMail, IconUser } from '@tabler/icons';
 import ProfileImg from 'src/assets/images/profile/user-1.jpg';
 
 const Profile = () => {
-  const [anchorEl2, setAnchorEl2] = useState(null);
-  const handleClick2 = (event) => {
+  const [anchorEl2, setAnchorEl2] = useState<null | HTMLElement>(null);
+
+  const handleClick2 = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl2(event.currentTarget);
   };
+
   const handleClose2 = () => {
     setAnchorEl2(null);
   };
@@ -28,10 +30,10 @@ const Profile = () => {
     <Box>
       <IconButton
         size="large"
-        aria-label="show 11 new notifications"
         color="inherit"
-        aria-controls="msgs-menu"
         aria-haspopup="true"
+        aria-controls="msgs-menu"
+        aria-label="show 11 new notifications"
         sx={{
           ...(typeof anchorEl2 === 'object' && {
             color: 'primary.main',
@@ -48,15 +50,13 @@ const Profile = () => {
           }}
         />
       </IconButton>
-      {/* ------------------------------------------- */}
-      {/* Message Dropdown */}
-      {/* ------------------------------------------- */}
+
       <Menu
+        keepMounted
         id="msgs-menu"
         anchorEl={anchorEl2}
-        keepMounted
-        open={Boolean(anchorEl2)}
         onClose={handleClose2}
+        open={Boolean(anchorEl2)}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         sx={{

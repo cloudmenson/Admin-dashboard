@@ -1,26 +1,24 @@
-import PropTypes from 'prop-types';
-// mui imports
+import React from 'react';
 import { ListSubheader, styled } from '@mui/material';
 
-const NavGroup = ({ item }) => {
-  const ListSubheaderStyle = styled((props) => <ListSubheader disableSticky {...props} />)(
-    ({ theme }) => ({
-      ...theme.typography.overline,
-      fontWeight: '700',
-      marginTop: theme.spacing(3),
-      marginBottom: theme.spacing(0),
-      color: theme.palette.text.primary,
-      lineHeight: '26px',
-      padding: '3px 12px',
-    }),
-  );
-  return (
-    <ListSubheaderStyle>{item.subheader}</ListSubheaderStyle>
-  );
-};
+import { INavGroup } from './types';
 
-NavGroup.propTypes = {
-  item: PropTypes.object,
+const ListSubheaderStyle = styled(ListSubheader)(({ theme }) => ({
+  padding: '3px 12px',
+  marginTop: theme.spacing(3),
+  marginBottom: theme.spacing(0),
+  fontWeight: '700',
+  lineHeight: '26px',
+  color: theme.palette.text.primary,
+  ...theme.typography.overline,
+}));
+
+const NavGroup: React.FC<INavGroup> = ({ item }) => {
+  return item.subheader ? (
+    <ListSubheaderStyle disableSticky>{item.subheader}</ListSubheaderStyle>
+  ) : (
+    ''
+  );
 };
 
 export default NavGroup;

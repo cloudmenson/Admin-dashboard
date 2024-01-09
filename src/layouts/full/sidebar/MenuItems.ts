@@ -1,10 +1,11 @@
+import { uniqueId } from 'lodash';
 import { IconLayoutDashboard, IconShoppingCart } from '@tabler/icons';
 
-import { uniqueId } from 'lodash';
+import { IMenuItems } from './types';
 
-const Menuitems = [
+const menuItems: IMenuItems[] = [
   {
-    navlabel: true,
+    navLabel: true,
     subheader: 'Home',
   },
   {
@@ -20,7 +21,7 @@ const Menuitems = [
     href: '/ecommerce',
   },
   {
-    navlabel: true,
+    navLabel: true,
     subheader: 'Extra',
   },
   {
@@ -31,4 +32,4 @@ const Menuitems = [
   },
 ];
 
-export default Menuitems;
+export default menuItems;

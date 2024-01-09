@@ -1,14 +1,14 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 import { useTheme } from '@mui/material/styles';
-import { Select, MenuItem } from '@mui/material';
+import { Select, MenuItem, SelectChangeEvent } from '@mui/material';
 
 import DashboardCard from '../../../components/shared/DashboardCard';
 
-const SalesOverview = () => {
-  const [month, setMonth] = React.useState('1');
+const SalesOverview: React.FC = () => {
+  const [month, setMonth] = React.useState<string>('1');
 
-  const handleChange = (event) => {
+  const handleChange = (event: SelectChangeEvent<string>) => {
     setMonth(event.target.value);
   };
 
@@ -16,7 +16,7 @@ const SalesOverview = () => {
   const primary = theme.palette.primary.main;
   const secondary = theme.palette.secondary.main;
 
-  const optionscolumnchart = {
+  const optionscolumnchart: any = {
     chart: {
       type: 'bar',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -73,7 +73,7 @@ const SalesOverview = () => {
       fillSeriesColor: false,
     },
   };
-  const seriescolumnchart = [
+  const seriescolumnchart: any = [
     {
       name: 'Eanings this month',
       data: [355, 390, 300, 350, 390, 180, 355, 390],

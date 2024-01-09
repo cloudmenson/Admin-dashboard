@@ -1,14 +1,14 @@
+import React from 'react';
 import Chart from 'react-apexcharts';
 import { useTheme } from '@mui/material/styles';
 import { Card, CardHeader, CardContent } from '@mui/material';
 
-const EmployeeSalary = () => {
+const EmployeeSalary: React.FC = () => {
   const theme = useTheme();
   const primary = 'rgb(93, 135, 255)';
   const primarylight = 'rgb(236,242,255)';
 
-  // chart
-  const optionscolumnchart = {
+  const optionscolumnchart: any = {
     chart: {
       type: 'bar',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -55,7 +55,7 @@ const EmployeeSalary = () => {
       theme: theme.palette.mode === 'dark' ? 'dark' : 'light',
     },
   };
-  const seriescolumnchart = [
+  const seriescolumnchart: any = [
     {
       name: '',
       data: [20, 15, 30, 25, 10, 15],
@@ -65,12 +65,12 @@ const EmployeeSalary = () => {
   return (
     <Card variant="outlined">
       <CardHeader
-        title="Yearly Sales"
-        subheader="Total Sales"
+        dataItem2="$5,296"
         dataLabel1="Salary"
         dataItem1="$36,358"
+        title="Yearly Sales"
         dataLabel2="Expance"
-        dataItem2="$5,296"
+        subheader="Total Sales"
         titleTypographyProps={{ fontSize: '18px' }}
       />
 

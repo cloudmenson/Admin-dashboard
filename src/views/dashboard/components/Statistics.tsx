@@ -1,3 +1,4 @@
+import React from 'react';
 import Chart from 'react-apexcharts';
 import {
   Box,
@@ -9,18 +10,16 @@ import {
   AvatarGroup,
   CardContent,
 } from '@mui/material';
-import { IconMessage2 } from '@tabler/icons';
-import { IconArrowUpLeft } from '@tabler/icons';
-import { IconArrowDownRight } from '@tabler/icons';
+import { IconMessage2, IconArrowUpLeft, IconArrowDownRight } from '@tabler/icons';
 
-const Statistics = () => {
+const Statistics: React.FC = () => {
   const primary = 'rgb(93,135,255)';
   const secondary = 'rgb(73,190,255)';
   const errorlight = 'rgb(253,237,232)';
   const successlight = 'rgb(230,255,250)';
   const secondarylight = 'rgb(232,247,255)';
 
-  const optionscolumnchart = {
+  const optionscolumnchart: any = {
     chart: {
       type: 'bar',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -86,7 +85,7 @@ const Statistics = () => {
       },
     },
   };
-  const seriescolumnchart = [
+  const seriescolumnchart: any = [
     {
       name: '',
       data: [4, 10, 9, 7, 9, 10, 11, 8, 10],
@@ -94,7 +93,7 @@ const Statistics = () => {
   ];
 
   // chart
-  const optionschart = {
+  const optionschart: any = {
     chart: {
       type: 'area',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -127,7 +126,7 @@ const Statistics = () => {
       },
     },
   };
-  const serieschart = [
+  const serieschart: any = [
     {
       name: '',
       color: secondary,

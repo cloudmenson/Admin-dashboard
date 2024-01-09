@@ -9,6 +9,7 @@ const PageContainer: React.FC<IPageContainer> = ({ title, description, children 
       <title>{title}</title>
       <meta name="description" content={description} />
     </Helmet>
+
     {children}
   </div>
 );

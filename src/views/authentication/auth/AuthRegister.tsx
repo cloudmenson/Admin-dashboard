@@ -25,12 +25,12 @@ const AuthRegister: React.FC<IAuth> = ({ title, subtitle, subtext }) => (
         <CustomTextField id="name" variant="outlined" fullWidth />
 
         <Typography
-          variant="subtitle1"
-          fontWeight={600}
-          component="label"
-          htmlFor="email"
           mb="5px"
           mt="25px"
+          htmlFor="email"
+          fontWeight={600}
+          component="label"
+          variant="subtitle1"
         >
           Email Address
         </Typography>

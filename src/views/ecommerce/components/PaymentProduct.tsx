@@ -1,12 +1,13 @@
+import React from 'react';
 import Chart from 'react-apexcharts';
 import { IconArrowUpLeft } from '@tabler/icons';
 import { Card, CardContent, Typography, Stack, Avatar, Grid } from '@mui/material';
 
-const PaymentProduct = () => {
+const PaymentProduct: React.FC = () => {
   const success = 'rgb(19,222,185)';
   const successlight = 'rgb(230,255,250)';
 
-  const optionscolumnchart = {
+  const optionscolumnchart: any = {
     chart: {
       type: 'area',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -39,7 +40,7 @@ const PaymentProduct = () => {
       },
     },
   };
-  const seriescolumnchart = [
+  const seriescolumnchart: any = [
     {
       name: '',
       color: success,

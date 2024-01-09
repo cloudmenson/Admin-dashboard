@@ -40,11 +40,11 @@ const AuthLogin: React.FC<IAuth> = ({ title, subtitle, subtext }) => (
       </Box>
       <Box mt="25px">
         <Typography
-          variant="subtitle1"
+          mb="5px"
           fontWeight={600}
           component="label"
           htmlFor="password"
-          mb="5px"
+          variant="subtitle1"
         >
           Password
         </Typography>
