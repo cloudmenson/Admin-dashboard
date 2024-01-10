@@ -14,14 +14,13 @@ const Sidebar: React.FC<ISidebar> = ({ open, onClose }) => {
     return (
       <Box
         sx={{
-          width: sidebarWidth,
           flexShrink: 0,
+          width: sidebarWidth,
         }}
       >
         <Drawer
           anchor="left"
           open={open}
-          // open={isSidebarOpen}
           variant="permanent"
           PaperProps={{
             sx: {
@@ -50,12 +49,10 @@ const Sidebar: React.FC<ISidebar> = ({ open, onClose }) => {
 
   return (
     <Drawer
-      anchor="left"
-      variant="temporary"
-      // onClose={props.onSidebarClose}
-      onClose={onClose}
-      // open={props.isMobileSidebarOpen}
       open={open}
+      anchor="left"
+      onClose={onClose}
+      variant="temporary"
       PaperProps={{
         sx: {
           width: sidebarWidth,

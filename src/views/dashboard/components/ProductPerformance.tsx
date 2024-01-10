@@ -14,7 +14,7 @@ import {
 
 import DashboardCard from '../../../components/shared/DashboardCard';
 
-interface Product {
+interface IProduct {
   id: string;
   imgsrc: string;
   name: string;
@@ -25,7 +25,7 @@ interface Product {
   budget: string;
 }
 
-const products: Product[] = [
+const products: IProduct[] = [
   {
     id: '1',
     imgsrc:
@@ -132,6 +132,7 @@ const ProductPerformance: React.FC = () => {
                       <Typography variant="subtitle2" fontWeight={600}>
                         {product.name}
                       </Typography>
+
                       <Typography
                         color="textSecondary"
                         sx={{
@@ -149,6 +150,7 @@ const ProductPerformance: React.FC = () => {
                     {product.pname}
                   </Typography>
                 </TableCell>
+
                 <TableCell>
                   <Chip
                     sx={{
@@ -158,8 +160,9 @@ const ProductPerformance: React.FC = () => {
                     }}
                     size="small"
                     label={product.priority}
-                  ></Chip>
+                  />
                 </TableCell>
+
                 <TableCell align="right">
                   <Typography variant="h6">${product.budget}k</Typography>
                 </TableCell>

@@ -1,9 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { List, styled, useTheme, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 
 import { INavItem } from './types';
 
-const NavItem: React.FC<INavItem> = ({ item, level, onClick }) => {
+const NavItem: React.FC<INavItem> = ({ item, level, pathDirect, onClick }) => {
   const Icon = item?.icon;
   const theme = useTheme();
   const currentLevel = level ?? 0;
@@ -33,7 +34,17 @@ const NavItem: React.FC<INavItem> = ({ item, level, onClick }) => {
 
   return (
     <List component="li" disablePadding key={item.id}>
-      <ListItemStyled onClick={onClick}>
+      <ListItemStyled
+        // @ts-ignore
+        button
+        to={item.href}
+        onClick={onClick}
+        disabled={item.disabled}
+        selected={pathDirect === item.href}
+        href={item.external ? item.href : ''}
+        target={item.external ? '_blank' : ''}
+        component={item.external ? 'a' : NavLink}
+      >
         <ListItemIcon
           sx={{
             p: '3px 0',

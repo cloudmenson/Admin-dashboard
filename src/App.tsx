@@ -5,6 +5,7 @@ import { ThemeProvider } from '@mui/material';
 
 import Router from './routes/Router';
 import { baselightTheme } from './theme/DefaultColors';
+import './i18n/i18n';
 
 function App() {
   const theme = baselightTheme;

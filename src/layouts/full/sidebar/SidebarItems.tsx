@@ -16,6 +16,8 @@ const SidebarItems = () => {
         {menuItems?.map((item) => {
           if (item.subheader) {
             return <NavGroup item={item} key={item.subheader} />;
+            
+            /* eslint no-else-return: "off" */
           } else {
             return <NavItem item={item} key={item.id} pathDirect={pathDirect} />;
           }

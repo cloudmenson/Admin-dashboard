@@ -10,9 +10,6 @@ export interface IMenuItems {
 }
 
 export interface ISidebar {
-  // isSidebarOpen: boolean;
-  // isMobileSidebarOpen: boolean;
-  // onSidebarClose: () => void;
   open: boolean;
   onClose: () => void;
 }

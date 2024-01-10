@@ -15,15 +15,15 @@ import { IconListCheck, IconMail, IconUser } from '@tabler/icons';
 
 import ProfileImg from 'src/assets/images/profile/user-1.jpg';
 
-const Profile = () => {
-  const [anchorEl2, setAnchorEl2] = useState<null | HTMLElement>(null);
+const Profile: React.FC = () => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-  const handleClick2 = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl2(event.currentTarget);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const handleClose2 = () => {
-    setAnchorEl2(null);
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -32,18 +32,18 @@ const Profile = () => {
         size="large"
         color="inherit"
         aria-haspopup="true"
+        onClick={handleClick}
         aria-controls="msgs-menu"
         aria-label="show 11 new notifications"
         sx={{
-          ...(typeof anchorEl2 === 'object' && {
+          ...(typeof anchorEl === 'object' && {
             color: 'primary.main',
           }),
         }}
-        onClick={handleClick2}
       >
         <Avatar
+          alt="Avatar"
           src={ProfileImg}
-          alt={ProfileImg}
           sx={{
             width: 35,
             height: 35,
@@ -54,9 +54,9 @@ const Profile = () => {
       <Menu
         keepMounted
         id="msgs-menu"
-        anchorEl={anchorEl2}
-        onClose={handleClose2}
-        open={Boolean(anchorEl2)}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        open={Boolean(anchorEl)}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         sx={{
@@ -83,6 +83,7 @@ const Profile = () => {
           </ListItemIcon>
           <ListItemText>My Tasks</ListItemText>
         </MenuItem>
+
         <Box mt={1} py={1} px={2}>
           <Button to="/auth/login" variant="outlined" color="primary" component={Link} fullWidth>
             Logout

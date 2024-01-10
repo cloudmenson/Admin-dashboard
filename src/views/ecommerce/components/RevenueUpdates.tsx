@@ -1,8 +1,10 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
+import { useTranslation } from 'react-i18next';
 import { Stack, Typography, Avatar, Box, Card, CardHeader, CardContent } from '@mui/material';
 
 const RevenueUpdates: React.FC = () => {
+  const { t } = useTranslation();
   const primary = 'rgb(93, 135, 255)';
   const secondary = 'rgb(73,190,255)';
 
@@ -57,7 +59,7 @@ const RevenueUpdates: React.FC = () => {
       fillSeriesColor: false,
     },
   };
-  const seriescolumnchart = [
+  const seriescolumnchart: any = [
     {
       name: 'Footware',
       data: [2.5, 3.7, 3.2, 2.6, 1.9],
@@ -71,8 +73,8 @@ const RevenueUpdates: React.FC = () => {
   return (
     <Card variant="outlined">
       <CardHeader
-        title="Revenue Updates"
-        subheader="Overview of Profit"
+        title={t('revenue-updates.title')}
+        subheader={t('revenue-updates.subheader')}
         titleTypographyProps={{ fontSize: '18px' }}
       />
 
@@ -86,13 +88,15 @@ const RevenueUpdates: React.FC = () => {
                 bgcolor: primary,
                 svg: { display: 'none' },
               }}
-            ></Avatar>
+            />
+
             <Box>
               <Typography variant="subtitle2" fontSize="12px" color="textSecondary">
                 Footware
               </Typography>
             </Box>
           </Stack>
+
           <Stack direction="row" alignItems="center" spacing={1}>
             <Avatar
               sx={{
@@ -101,10 +105,11 @@ const RevenueUpdates: React.FC = () => {
                 bgcolor: secondary,
                 svg: { display: 'none' },
               }}
-            ></Avatar>
+            />
+
             <Box>
               <Typography variant="subtitle2" fontSize="12px" color="textSecondary">
-                Fashionware
+                {t('revenue-updates.fashionware')}
               </Typography>
             </Box>
           </Stack>
