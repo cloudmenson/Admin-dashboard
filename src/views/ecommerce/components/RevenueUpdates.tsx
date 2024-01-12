@@ -1,10 +1,8 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { useTranslation } from 'react-i18next';
 import { Stack, Typography, Avatar, Box, Card, CardHeader, CardContent } from '@mui/material';
 
 const RevenueUpdates: React.FC = () => {
-  const { t } = useTranslation();
   const primary = 'rgb(93, 135, 255)';
   const secondary = 'rgb(73,190,255)';
 
