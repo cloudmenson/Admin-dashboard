@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "home-subheader": "家",
+    "event-feed-subheader": "事件流",
+    "extra-subheader": "額外",
+    "dashboard": "儀表板",
+    "ecommerce": "电子商务",
+    "blog": "博客",
+    "shop": "商店",
+    "login": "登录",
+    "register": "注册",
+    "error": "错误"
+  }
+}

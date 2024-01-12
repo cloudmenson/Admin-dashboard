@@ -18,7 +18,7 @@ const RecentTransactions = () => {
     <DashboardCard title="Recent Transactions">
       <>
         <Timeline
-          placeholder={false}
+          placeholder="false"
           className="theme-timeline"
           sx={{
             boxShadow: 'none',

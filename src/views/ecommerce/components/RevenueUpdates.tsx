@@ -14,7 +14,7 @@ const RevenueUpdates: React.FC = () => {
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
       foreColor: '#adb0bb',
       toolbar: {
-        show: false,
+        show: true,
       },
       height: 320,
       offsetX: -20,
@@ -73,8 +73,8 @@ const RevenueUpdates: React.FC = () => {
   return (
     <Card variant="outlined">
       <CardHeader
-        title={t('revenue-updates.title')}
-        subheader={t('revenue-updates.subheader')}
+        title="Revenue Updates"
+        subheader="Overview of Profit"
         titleTypographyProps={{ fontSize: '18px' }}
       />
 
@@ -109,11 +109,12 @@ const RevenueUpdates: React.FC = () => {
 
             <Box>
               <Typography variant="subtitle2" fontSize="12px" color="textSecondary">
-                {t('revenue-updates.fashionware')}
+                Fashionware
               </Typography>
             </Box>
           </Stack>
         </Stack>
+
         <Chart options={optionscolumnchart} series={seriescolumnchart} type="bar" height="320px" />
       </CardContent>
     </Card>

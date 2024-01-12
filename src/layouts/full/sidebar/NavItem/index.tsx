@@ -16,7 +16,7 @@ const NavItem: React.FC<INavItem> = ({ item, level, pathDirect, onClick }) => {
     padding: '8px 10px',
     borderRadius: '8px',
     backgroundColor: currentLevel > 1 ? 'transparent !important' : 'inherit',
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
     paddingLeft: '10px',
     '&:hover': {
       backgroundColor: theme.palette.primary.light,

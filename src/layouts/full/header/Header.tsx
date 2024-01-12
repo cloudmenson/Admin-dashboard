@@ -5,7 +5,7 @@ import { Stack, AppBar, styled, Toolbar, IconButton, Box } from '@mui/material';
 import Profile from './Profile';
 import { IHeader } from './types';
 import Notification from './Notification';
-import LanguageSelector from '../../../components/lang-selector/LanguageSelector';
+import LanguageSelector from './LanguageSelector';
 
 const Header: React.FC<IHeader> = ({ toggleMobileSidebar }) => {
   const AppBarStyled = styled(AppBar)(({ theme }) => ({
@@ -43,9 +43,9 @@ const Header: React.FC<IHeader> = ({ toggleMobileSidebar }) => {
         <Box flexGrow={1} />
 
         <Stack spacing={1} direction="row" alignItems="center">
-          <LanguageSelector />
-
           <Notification />
+
+          <LanguageSelector />
 
           <Profile />
         </Stack>

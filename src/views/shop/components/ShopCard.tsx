@@ -4,48 +4,67 @@ import { Link } from 'react-router-dom';
 import { IconBasket } from '@tabler/icons';
 import { CardContent, Typography, Grid, Rating, Tooltip, Fab } from '@mui/material';
 
-import img1 from 'src/assets/images/products/s4.jpg';
-import img2 from 'src/assets/images/products/s5.jpg';
-import img3 from 'src/assets/images/products/s7.jpg';
-import img4 from 'src/assets/images/products/s11.jpg';
 import BlankCard from '../../../components/shared/BlankCard';
 
 const ecoCard = [
   {
     title: 'Boat Headphone',
-    subheader: 'September 14, 2023',
-    photo: img1,
-    salesPrice: 375,
-    price: 285,
+    subheader: 'January 7, 2024',
+    photo:
+      'https://modernize-nextjs.adminmart.com/_next/image?url=%2Fimages%2Fproducts%2Fs4.jpg&w=640&q=75',
+    salesPrice: 65,
+    price: 50,
     rating: 4,
   },
-  {
-    title: 'MacBook Air Pro',
-    subheader: 'September 14, 2023',
-    photo: img2,
-    salesPrice: 650,
-    price: 900,
-    rating: 5,
-  },
+
   {
     title: 'Red Valvet Dress',
-    subheader: 'September 14, 2023',
-    photo: img3,
+    subheader: 'January 6, 2024',
+    photo:
+      'https://modernize-nextjs.adminmart.com/_next/image?url=%2Fimages%2Fproducts%2Fs7.jpg&w=640&q=75',
     salesPrice: 150,
     price: 200,
     rating: 3,
   },
   {
     title: 'Cute Soft Teddybear',
-    subheader: 'September 14, 2023',
-    photo: img4,
+    subheader: 'January 5, 2024',
+    photo:
+      'https://modernize-nextjs.adminmart.com/_next/image?url=%2Fimages%2Fproducts%2Fs11.jpg&w=640&q=75',
     salesPrice: 285,
     price: 345,
     rating: 2,
   },
+  {
+    title: 'Gaming Console',
+    subheader: 'January 4, 2024',
+    photo:
+      'https://modernize-nextjs.adminmart.com/_next/image?url=%2Fimages%2Fproducts%2Fs6.jpg&w=640&q=75',
+    salesPrice: 25,
+    price: 31,
+    rating: 3,
+  },
+  {
+    title: 'The Psychology of Money',
+    subheader: 'January 2, 2024',
+    photo:
+      'https://modernize-nextjs.adminmart.com/_next/image?url=%2Fimages%2Fproducts%2Fs3.jpg&w=640&q=75',
+    salesPrice: 125,
+    price: 137,
+    rating: 5,
+  },
+  {
+    title: 'How Innovation Works',
+    subheader: 'January 3, 2023',
+    photo:
+      'https://modernize-nextjs.adminmart.com/_next/image?url=%2Fimages%2Fproducts%2Fs1.jpg&w=640&q=75',
+    salesPrice: 275,
+    price: 350,
+    rating: 4,
+  },
 ];
 
-const Blog = () => {
+const ShopCard = () => {
   return (
     <Grid container spacing={3}>
       {ecoCard?.map((product, index) => (
@@ -87,4 +106,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default ShopCard;

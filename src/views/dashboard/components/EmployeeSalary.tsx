@@ -65,11 +65,11 @@ const EmployeeSalary: React.FC = () => {
   return (
     <Card variant="outlined">
       <CardHeader
-        dataItem2="$5,296"
-        dataLabel1="Salary"
-        dataItem1="$36,358"
+        dataitem2="$5,296"
+        datalabel1="Salary"
+        dataitem1="$36,358"
         title="Yearly Sales"
-        dataLabel2="Expance"
+        datalabel2="Expance"
         subheader="Total Sales"
         titleTypographyProps={{ fontSize: '18px' }}
       />

@@ -1,8 +1,14 @@
 {
-  "revenue-updates": {
-    "title": "Revenue Updates",
-    "subheader": "Overview of Profit",
-    "footware": "Footware",
-    "fashionware": "Fashionware"
+  "menu": {
+    "home-subheader": "Home",
+    "event-feed-subheader": "Event feed",
+    "extra-subheader": "Extra",
+    "dashboard": "Dashboard",
+    "ecommerce": "eCommerce",
+    "blog": "Blog",
+    "shop": "Shop",
+    "login": "Login",
+    "register": "Register",
+    "error": "Error"
   }
 }

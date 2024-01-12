@@ -1,8 +1,14 @@
 {
-  "revenue-updates": {
-    "title": "Оновлення доходів",
-    "subheader": "Огляд прибутку",
-    "footware": "Взуття",
-    "fashionware": "Модний посуд"
+  "menu": {
+    "home-subheader": "Дім",
+    "event-feed-subheader": "Стрічка подій",
+    "extra-subheader": "Екстра",
+    "dashboard": "Панель управління",
+    "ecommerce": "Електронна комерція",
+    "blog": "Блог",
+    "shop": "Магазин",
+    "login": "Логін",
+    "register": "Реєстрація",
+    "error": "Помилка"
   }
 }

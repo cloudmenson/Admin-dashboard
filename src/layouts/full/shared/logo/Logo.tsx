@@ -7,7 +7,7 @@ import { ReactComponent as LogoDark } from 'src/assets/images/logos/dark-logo.sv
 const LinkStyled = styled(Link)(() => ({
   display: 'block',
   height: '70px',
-  width: '180px',
+  width: '220px',
   overflow: 'hidden',
 }));
 

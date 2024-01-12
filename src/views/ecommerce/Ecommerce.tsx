@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Box } from '@mui/material';
 
+import TransTrack from './components/TransTrack';
 import WeeklyStats from './components/WeeklyStats';
 import SalesOverview from './components/SalesOverview';
 import RevenueUpdates from './components/RevenueUpdates';
@@ -15,6 +16,10 @@ const Ecommerce = () => {
     <PageContainer title="Ecommerce" description="Ecommerce page">
       <Box>
         <Grid container spacing={3}>
+          <Grid item xs={12} lg={12}>
+            <TransTrack />
+          </Grid>
+
           <Grid item xs={12} lg={4}>
             <RevenueUpdates />
           </Grid>

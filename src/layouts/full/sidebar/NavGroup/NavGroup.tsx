@@ -7,7 +7,6 @@ const ListSubheaderStyle = styled(ListSubheader)(({ theme }) => ({
   padding: '3px 12px',
   marginTop: theme.spacing(3),
   marginBottom: theme.spacing(0),
-  fontWeight: '700',
   lineHeight: '26px',
   color: theme.palette.text.primary,
   ...theme.typography.overline,

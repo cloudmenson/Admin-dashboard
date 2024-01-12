@@ -75,10 +75,10 @@ const SalesOverview: React.FC = () => {
 
       <Box mt={3}>
         <Chart
-          options={optionscolumnchart}
-          series={seriescolumnchart}
           type="donut"
           height="254px"
+          series={seriescolumnchart}
+          options={optionscolumnchart}
         />
       </Box>
 
@@ -135,6 +135,7 @@ const SalesOverview: React.FC = () => {
               <Typography variant="h6" fontWeight="600">
                 $23,450
               </Typography>
+
               <Typography variant="subtitle2" color="textSecondary">
                 Expance
               </Typography>
